@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "doctor_patient_dapp_backend": {
+      "main": "src/doctor_patient_dapp_backend/main.mo",
+      "type": "motoko"
+    },
+    "doctor_patient_dapp_frontend": {
+      "dependencies": [
+        "doctor_patient_dapp_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/doctor_patient_dapp_frontend/src/index.html"
+      },
+      "source": [
+        "src/doctor_patient_dapp_frontend/assets",
+        "dist/doctor_patient_dapp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
